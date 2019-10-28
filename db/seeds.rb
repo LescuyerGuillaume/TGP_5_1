@@ -19,15 +19,15 @@ end
 end
 
 20.times do |index|	#cree 20 gossip en reference avec user
-	Gossip.create(title: "Gossip#{index + 1}",content: Faker::ChuckNorris.fact, user: User.all.sample)
+	Gossip.create(title: "Gossip n°#{index + 1}",content: Faker::ChuckNorris.fact, user: User.all.sample)
 end
 
 10.times do 		#cree 10 tag
 	Tag.create(title: "##{Faker::Games::Pokemon.name}")
 end
 
-1.upto(20) do |index|		#Fait la relation de 20 gossips avec des tags
-	TagList.create(gossip: Gossip.find(index + 1), tag: Tag.all.sample)	
+20.times do			#Fait la relation de 20 gossips avec des tags
+	TagList.create(gossip: Gossip.all.sample, tag: Tag.all.sample)	
 end
 
 20.times do	#creer 20 messages en reference avec l'utilsateur sender et creer un nombre aleatoire de receveur user
