@@ -1,0 +1,7 @@
+<h3>Page de <%=  User.find(params[:id]).first_name %> ! </h3>
+<%=  User.find(params[:id]).first_name %>
+<%=  User.find(params[:id]).last_name %><br />
+<%=  User.find(params[:id]).age %><br />
+<%=  User.find(params[:id]).city.name %><br />
+<%=  User.find(params[:id]).email %><br />
+<%=  User.find(params[:id]).description %>

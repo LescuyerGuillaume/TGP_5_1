@@ -1,0 +1,8 @@
+<h3>Bienvenue, <%= params[:id] %> ! </h3>
+<p>Voici la liste des potins existants et le prénom de leurs auteurs : </p>
+
+<% Gossip.all.each do |gossip| %>
+	<%=  gossip.title %>
+ 	<%=  gossip.user.first_name%>
+ 	<a href="/gossip/<%= gossip.id %>">Page du potin</a><br />
+<% end %>

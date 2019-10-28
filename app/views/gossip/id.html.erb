@@ -1,0 +1,6 @@
+<h3>Page du potin n°<%= params[:id] %> ! </h3>
+
+<%=  Gossip.find(params[:id]).user.first_name %>
+<%=  Gossip.find(params[:id]).user.last_name %> <a href="/user/<%= Gossip.find(params[:id]).user_id %>">Page de l'utilisateur</a><br />
+<%=  Gossip.find(params[:id]).title %><br />
+<%=  Gossip.find(params[:id]).content %><br />
